@@ -1,0 +1,23 @@
+﻿@model ModelBindingSample.Models.Student 
+@*Doesnt have to be fully mapped out, top row is used to connect models to input from file*@
+@{
+    ViewData["Title"] = "ModelBinding Sample";
+}
+
+<h1>ModelBinding Sample</h1>
+
+<form method="post"><!--post hides form information in the background-->
+    <label asp-for="FullName"></label>
+    <input asp-for="FullName" />
+    <span asp-validation-for="FullName"></span><br />
+
+    <label asp-for="DateOfBirth"></label>
+    <input asp-for="DateOfBirth" />
+    <span asp-validation-for="DateOfBirth"></span><br />
+
+    <label asp-for="FavoriteNumber"></label>
+    <input asp-for="FavoriteNumber" />
+    <span asp-validation-for="FavoriteNumber"></span><br />
+
+    <input type="submit" value="Create Student" />
+</form>
